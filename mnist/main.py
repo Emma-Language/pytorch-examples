@@ -1,3 +1,4 @@
+import os
 import argparse
 import torch
 import torch.nn as nn
@@ -71,6 +72,7 @@ def test(model, device, test_loader):
 
 def main():
     # Training settings
+    print(os.environ)
     parser = argparse.ArgumentParser(description='PyTorch MNIST Example')
     parser.add_argument('--batch-size', type=int, default=64, metavar='N',
                         help='input batch size for training (default: 64)')
